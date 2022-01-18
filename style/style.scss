@@ -132,7 +132,7 @@ body {
 /*--------------------
   Messages
   --------------------*/
-.messages {
+  .messages {
     flex: 1 1 auto;
     color: rgba(255, 255, 255, 0.5);
     overflow: hidden;
@@ -180,9 +180,12 @@ body {
         &.message-personal {
             float: right;
             color: #fff;
+            overflow-wrap: break-word;
             text-align: right;
             background: linear-gradient(120deg, $color5, $color7);
             border-radius: 10px 10px 0 10px;
+            max-width: 200px;
+            margin: 8px 0px;
 
             &::before {
                 left: auto;
@@ -202,6 +205,7 @@ body {
             transform: scale(0);
             transform-origin: 0 0;
             animation: bounce 500ms linear both;
+            max-width: 200px;
         }
 
         &.loading {
@@ -233,10 +237,11 @@ body {
     }
 }
 
+
 /*--------------------
   Message Box
   --------------------*/
-.message-box {
+  .message-box {
     flex: 0 1 40px;
     width: 100%;
     background: rgba(0, 0, 0, 0.3);
@@ -253,7 +258,21 @@ body {
         height: 17px;
         margin: 0;
         padding-right: 20px;
-        width: 265px;
+        width: 90%;
+        height: 100%;
+        
+        &::-webkit-scrollbar {
+          width: 10px;
+          height: 10px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+          background: transparent;
+        }
+        
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
     }
 
     textarea:focus:-webkit-placeholder {
@@ -271,6 +290,7 @@ body {
         font-size: 10px;
         text-transform: uppercase;
         line-height: 1;
+        margin: 5px 0px;
         padding: 6px 10px;
         border-radius: 10px;
         outline: none !important;
@@ -281,7 +301,6 @@ body {
         }
     }
 }
-
 /*--------------------
   Custom Srollbar
   --------------------*/

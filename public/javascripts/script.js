@@ -5,7 +5,7 @@ var $messages = $('.messages-content'),
 $(window).load(function() {
   $messages.mCustomScrollbar();
   setTimeout(function() {
-    messagePerson(['Hi there!', 'Iam a chat Bot', 'how can i help you']);
+    messagePerson(['Hi there!', `I am 'Charlie'`, 'how can i help you']);
   }, 100);
 });
 

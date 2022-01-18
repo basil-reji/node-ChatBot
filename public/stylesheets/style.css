@@ -185,9 +185,12 @@ body {
 .messages .message.message-personal {
   float: right;
   color: #fff;
+  overflow-wrap: break-word;
   text-align: right;
   background: linear-gradient(120deg, #534d8d, #100d2a);
   border-radius: 10px 10px 0 10px;
+  max-width: 200px;
+  margin: 8px 0px;
 }
 
 .messages .message.message-personal::before {
@@ -210,6 +213,7 @@ body {
           transform-origin: 0 0;
   -webkit-animation: bounce 500ms linear both;
           animation: bounce 500ms linear both;
+  max-width: 200px;
 }
 
 .messages .message.loading::before {
@@ -304,7 +308,21 @@ body {
   height: 17px;
   margin: 0;
   padding-right: 20px;
-  width: 265px;
+  width: 90%;
+  height: 100%;
+}
+
+.message-box .message-input::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.message-box .message-input::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.message-box .message-input::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .message-box textarea:focus:-webkit-placeholder {
@@ -322,6 +340,7 @@ body {
   font-size: 10px;
   text-transform: uppercase;
   line-height: 1;
+  margin: 5px 0px;
   padding: 6px 10px;
   border-radius: 10px;
   outline: none !important;
