@@ -27,7 +27,7 @@
 @import './theme';
 
 html {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 body {
@@ -44,9 +44,10 @@ body {
 }
 
 .canvas{
+    position: absolute;
     height: 100%;
     width: 100%;
-    background-color: rgba($color: #257287, $alpha: 0.5);
+    background-color: rgba($color: $color7, $alpha: 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,7 +156,7 @@ body {
         margin: 8px 0;
         font-size: 11px;
         line-height: 1.4;
-        margin-left: 35px;
+        //margin-left: 35px;
         position: relative;
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 
@@ -175,30 +176,11 @@ body {
             border-right: 7px solid transparent;
         }
 
-        .avatar {
-            position: absolute;
-            z-index: 1;
-            bottom: -15px;
-            left: -35px;
-            border-radius: 30px;
-            width: 30px;
-            height: 30px;
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
-            border: 2px solid rgba(255, 255, 255, 0.24);
-
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
-
         &.message-personal {
             float: right;
             color: #fff;
             text-align: right;
-            background: linear-gradient(120deg, $color5, #257287);
+            background: linear-gradient(120deg, $color5, $color7);
             border-radius: 10px 10px 0 10px;
 
             &::before {
@@ -206,7 +188,7 @@ body {
                 right: 0;
                 border-right: none;
                 border-left: 5px solid transparent;
-                border-top: 4px solid #257287;
+                border-top: 4px solid $color7;
                 bottom: -4px;
             }
         }
